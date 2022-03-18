@@ -6,7 +6,22 @@ namespace Payslip_App
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to the payslip generator!");
+            var inputEmployee = GetEmployeeInfo();
+            var payslipGeneratorService = new PayslipGeneratorService();
+            var paySlip = payslipGeneratorService.Generate(inputEmployee);
+            PrintPayslip(paySlip);
+            Console.WriteLine("Thank you for using MYOB!");
+        }
+
+        private static Employee GetEmployeeInfo()
+        {
+            return null;
+        }
+
+        private static void PrintPayslip(Payslip payslip)
+        {
+            
         }
     }
 }
